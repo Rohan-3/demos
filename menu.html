@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Menu</title>
+
+    <style src="menu.css"></style>
+    <script> 
+
+    var timeout = 500;
+    var closetimer=0;
+    var ddmenuitem=0;
+
+     function mopen(id){
+        if (ddmenuitem) ddmenuitem.style.visibility="hidden"        
+     }
+
+     function mclose(){
+        if (ddmenuitem) ddmenuitem.style.visibility="hidden"       
+        
+     }
+
+     function mclosetime(){
+        closetimer=window.setTimeout(mclose, timeout);
+     }
+
+     function mcancelclosetime(){
+        if (closetimer) {
+            window.clearTimeout(closetimer)
+            closetimer=null;
+        }
+     }
+    </script>
+</head>
+<body>
+    
+    <ul id="ulist">
+    <li><a href="">Home</a>  </li>
+
+    <li><a href="">About</a> 
+        <div id="11">
+            <a href="">Founders</a>
+            <a href="">About Company</a>
+        </div>
+    </li>
+
+    <li><a href="">Solution</a>
+        <div id="12">
+            <a href="">Solution1</a>
+            <a href="">Solution2</a>
+            <a href="">Solution3</a>
+        </div>
+    </li>
+
+
+    <li><a href="">Pricing </a>
+    <div id="13">
+        <a href="">Silver</a>
+        <a href="">Gold</a>
+        <a href="">Diamond</a>
+    </div></li>
+    <li><a href="">Contact</a>  </li>
+    </ul>
+
+</body>
+</html>
